@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/style-profil.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profil">
+        <h2>Profil</h2>
+        <div class="header">
+          <img src="" alt="" />
+        </div>
+        <form name="bio">
+          <div class="input-group">
+            <label for="">
+              Name Full<i class="fa fa-unlock-alt"></i>
+              <input
+                type="text"
+                placeholder="Nama Lengkap"
+                class="input-text"
+                name="nama"
+                required
+                autocomplete="off"
+              />
+            </label>
+          </div>
+          <div class="input-group">
+            <label for="">
+              Username
+              <i class="fa fa-unlock-alt"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                class="input-text"
+                name="username"
+                required
+                autocomplete="off"
+              />
+            </label>
+          </div>
+          <!-- <div class="input-group">
+            <label for="">
+              Ganti Profil
+              <input
+                type="file"
+                placeholder="Username"
+                class="input-text"
+                name="file"
+                autocomplete="off"
+              />
+            </label>
+          </div> -->
+          <div class="button-group" id="profil-button">
+            <button>Submit</button>
+            <button onclick="pindah()">Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../assets/java-script/index-profil.js"></script>
+  </body>
+</html>
