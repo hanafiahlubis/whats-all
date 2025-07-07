@@ -16,9 +16,9 @@ body {
 
 .daftar-form-container {
     position: relative;
-    width: 400px;
+    width: 488px;
     height: 36rem;
-    max-width: 400px;
+    max-width: 488px;
     max-height: 100vh;
     background: #040717;
     border-radius: 50px 5px;
@@ -75,9 +75,29 @@ body {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     text-align: center;
+    background: linear-gradient(90deg, #00ccff, #ee00ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s ease-in-out infinite;
+    letter-spacing: 3px;
+    font-size: xx-large;
+}
+
+@keyframes textAnimation {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
 }
 
 .input-group {
@@ -98,6 +118,11 @@ h2 {
     font-size: 20px;
     padding-left: 10px;
     color: #00ccff;
+    transition: 0.3s;
+}
+
+.input-text:focus {
+    border-bottom: 2px solid #ee00ff;
 }
 
 ::placeholder {
@@ -106,8 +131,9 @@ h2 {
     letter-spacing: 1px;
 }
 
-.fa {
-    font-size: 20px;
+.fa,
+.fa-eye {
+    font-size: 16px;
 }
 
 #daftar-button {
@@ -115,7 +141,8 @@ h2 {
     width: 300px;
     height: 40px;
     transition: 1s;
-    margin-top: 46px;
+    margin: 46px auto 0 auto;
+    font-size: 16px;
 }
 
 #daftar-button button {
@@ -134,6 +161,13 @@ h2 {
     justify-content: center;
     align-items: center;
     color: #00ccff;
+    font-size: 16px;
+}
+
+#daftar-button button:hover {
+    background-color: #00ccff;
+    color: #0c1022;
+    transition: 0.3s;
 }
 
 .fotter {
@@ -148,8 +182,69 @@ h2 {
     font-size: 18px;
 }
 
+.fotter a:hover {
+    color: #00ccff;
+}
+
 .glowIcon {
     text-shadow: 0 0 10px #00ccff;
+}
+
+#toggle-password {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#toggle-password.fa-eye-slash {
+    color: #00ccff;
+}
+
+.input-file {
+    display: none;
+}
+
+.file-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    background: #0c1022;
+    border: 1px solid #00ccff;
+    border-radius: 8px;
+    color: #00ccff;
+    cursor: pointer;
+    transition: .3s;
+    width: max-content;
+}
+
+.file-label:hover {
+    background: #00ccff;
+    color: #0c1022;
+}
+
+.file-name {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    width: max-content;
+    color: #00ccff;
+    margin-left: 8px;
+}
+
+.file-wrapper {
+    align-items: start;
+    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+    .file-label {
+        font-size: 14px;
+    }
+
+    .file-name {
+        font-size: 12px;
+    }
 }
 
 @media(max-width:480px) {
@@ -209,6 +304,4 @@ h2 {
         width: 271px;
         max-width: 254px;
     }
-
-
 }

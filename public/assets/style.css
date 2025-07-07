@@ -44,7 +44,7 @@ body {
     position: absolute;
     width: 170%;
     height: 170%;
-    content: "aa";
+    content: "";
     background-image: conic-gradient(transparent,
             transparent,
             transparent,
@@ -75,9 +75,29 @@ body {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     text-align: center;
+    background: linear-gradient(90deg, #00ccff, #ee00ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s ease-in-out infinite;
+    letter-spacing: 3px;
+    font-size: xx-large;
+}
+
+@keyframes textAnimation {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
 }
 
 .input-group {
@@ -98,8 +118,16 @@ h2 {
     font-size: 20px;
     padding-left: 10px;
     color: #00ccff;
+    transition: 0.3s;
 }
 
+/* Focus effect on input fields */
+.input-text:focus {
+    border-bottom: 2px solid #ee00ff;
+    /* Thicker and brighter border when focused */
+}
+
+/* Placeholder styling */
 ::placeholder {
     font-size: 15px;
     color: #00ccff52;
@@ -107,7 +135,7 @@ h2 {
 }
 
 .fa {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #login-button {
@@ -134,6 +162,14 @@ h2 {
     justify-content: center;
     align-items: center;
     color: #00ccff;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+#login-button button:hover {
+    background-color: #00ccff;
+    color: #0c1022;
+    transition: 0.3s;
 }
 
 .fotter {
@@ -148,83 +184,57 @@ h2 {
     font-size: 18px;
 }
 
-@media(max-width :450px) {
-    .login-form-container {
-        max-width: 400px;
-        max-height: 400px;
-    }
+.fotter a:hover {
+    color: #00ccff;
+}
 
-    .login-form>form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+#toggle-password {
+    color: #00ccff;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+#toggle-password:hover {
+    color: #ee00ff;
+    transition: color 0.3s ease;
+}
+
+@media(max-width: 480px) {
+    .login-form-container {
+        max-width: 325px;
+        height: 28rem;
     }
 
     h2 {
-        font-size: 33px;
+        font-size: 20px;
     }
 
     .input-text {
-        width: 95%;
-    }
-
-    #login-button {
-        margin-top: 46px;
-        width: 170px;
-    }
-
-    #login-button button {
-        font-size: 17px;
-    }
-
-    .fotter {
-        gap: 4rem;
-    }
-
-    .b .fotter>a {
-        font-size: 16px;
-    }
-}
-
-@media(max-width:410px) {
-    .login-form-container {
-        max-width: 320px;
-    }
-
-    ::placeholder {
         font-size: 12px;
     }
 
-    h2 {
-        font-size: 24px;
-    }
-
-    .input-group {
-        display: flex;
-        justify-content: center;
-    }
-
-    .fa {
-        display: none;
-    }
-
     #login-button {
+        margin-top: 28px;
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     #login-button button {
         width: 70%;
-        font-size: 14px;
-        height: 78%;
+        height: 27px;
+        font-size: 16px;
     }
 
     .fotter a {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
-@media(max-width:325px) {
+@media(max-width: 316px) {
     .login-form-container {
         max-width: 272px;
         max-height: 373px;
@@ -233,11 +243,6 @@ h2 {
     #login-button {
         margin-top: 22px;
     }
-
-    .fotter {
-        gap: 1.3rem;
-    }
-
 
     .fotter a {
         font-size: 13px;
